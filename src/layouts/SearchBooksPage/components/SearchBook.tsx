@@ -46,7 +46,7 @@ export const SearchBook: React.FC<{ book: BookModel }> = (props) => {
             className="btn btn-md main-color text-white "
             to={`/checkout/${props.book.id}`}
           >
-            Viev Details
+            View Details
           </Link>
         </div>
       </div>
