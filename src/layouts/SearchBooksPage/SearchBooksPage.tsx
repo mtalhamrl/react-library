@@ -3,6 +3,7 @@ import BookModel from "../../models/BookModel";
 import { SpinnerLoading } from "../utils/SpinnerLoading";
 import { SearchBook } from "./components/SearchBook";
 import { Pagination } from "../utils/Pagination";
+import { Link } from "react-router-dom";
 
 export const SearchBooksPage = () => {
   const [books, setBooks] = useState<BookModel[]>([]);
@@ -156,29 +157,29 @@ export const SearchBooksPage = () => {
                   aria-labelledby="drapdownMenuButton1"
                 >
                   <li onClick={() => categoryField("All")}>
-                    <a className="dropdown-item" href="/#">
+                    <Link className="dropdown-item" to={`/search/${searchUrl}`}>
                       All
-                    </a>
+                    </Link>
                   </li>
                   <li onClick={() => categoryField("FE")}>
-                    <a className="dropdown-item" href="/#">
+                    <Link className="dropdown-item" to={`/search/${searchUrl}`}>
                       Front End
-                    </a>
+                    </Link>
                   </li>
                   <li onClick={() => categoryField("BE")}>
-                    <a className="dropdown-item" href="/#">
+                    <Link className="dropdown-item" to={`/search/${searchUrl}`}>
                       Back End
-                    </a>
+                    </Link>
                   </li>
                   <li onClick={() => categoryField("Data")}>
-                    <a className="dropdown-item" href="/#">
+                    <Link className="dropdown-item" to={`/search/${searchUrl}`}>
                       Data
-                    </a>
+                    </Link>
                   </li>
                   <li onClick={() => categoryField("DevOps")}>
-                    <a className="dropdown-item" href="/#">
+                    <Link className="dropdown-item" to={`/search/${searchUrl}`}>
                       DevOps
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
