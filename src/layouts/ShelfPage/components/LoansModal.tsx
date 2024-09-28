@@ -85,10 +85,10 @@ export const LoansModal: React.FC<{
                     Return Book
                   </button>
                   <button
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
+                    onClick={
                       props.shelfCurrentLoan.daysLeft < 0
-                        ? event.preventDefault()
-                        : () => props.renewLoan(props.shelfCurrentLoan.book.id)
+                        ? (event) => event.preventDefault()
+                        : () => props.renewLoan(props.shelfCurrentLoan.book.id) // Fix here
                     }
                     data-bs-dismiss="modal"
                     className={

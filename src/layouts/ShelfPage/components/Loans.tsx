@@ -78,11 +78,15 @@ export const Loans = () => {
         "Content-Type": "application/json",
       },
     };
-    const returnResponse = await fetch(url, requestOptions);
-    if (!returnResponse.ok) {
-      throw new Error("Something went wrong!");
+    try {
+      const returnResponse = await fetch(url, requestOptions);
+      if (!returnResponse.ok) {
+        throw new Error("Something went wrong!");
+      }
+      setCheckout(!checkout);
+    } catch (error) {
+      console.error(error);
     }
-    setCheckout(!checkout);
   }
 
   return (
