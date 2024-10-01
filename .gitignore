@@ -25,3 +25,5 @@ yarn-error.log*
 
 # Ignore oktaConfig.ts
 src/lib/oktaConfig.ts
+
+ssl-localhost
